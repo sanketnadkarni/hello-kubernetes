@@ -2,7 +2,7 @@
 Create a unique app name
 */}}
 {{- define "hello-kubernetes.name" -}}
-{{- printf "%s-%s" .Chart.Name .Release.Name | trunc 63 | trimSuffix "-" }}
+{{- printf "%s" .Release.Name | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
